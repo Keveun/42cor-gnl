@@ -51,6 +51,9 @@
 	}
 	
 	$colors = new Colors();
+	echo $colors->getColoredString("\n---------- COMPILATION ---------\n", "yellow");
+	exec("make re");
+	echo $colors->getColoredString("\nCompilation terminee.\n", "green");
 	echo echo_partie("1");
 	echo echo_test("1.1");
 	echo "1 ligne de 8 caracteres avec \\n depuis l'entree standard:\n", getfile(TEST . "1", 1);

@@ -6,13 +6,15 @@
 /*   By: kperreau <kperreau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/10 17:56:05 by kperreau          #+#    #+#             */
-/*   Updated: 2014/11/23 13:23:13 by kperreau         ###   ########.fr       */
+/*   Updated: 2014/11/25 17:11:41 by kperreau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 #include <fcntl.h>
 #include <stdio.h>
+#include <unistd.h>
+#include "libft.h"
 
 int		main(int argc, char **argv)
 {
