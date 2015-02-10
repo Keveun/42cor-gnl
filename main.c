@@ -6,7 +6,7 @@
 /*   By: kperreau <kperreau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/10 17:56:05 by kperreau          #+#    #+#             */
-/*   Updated: 2015/02/10 21:38:15 by kperreau         ###   ########.fr       */
+/*   Updated: 2015/02/10 22:24:46 by kperreau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ int		main(int argc, char **argv)
 					free(line);
 					line = NULL;
 				}
+				if (line)
+					printf("%s", line);
 				close(fd);
 			}
 		}
