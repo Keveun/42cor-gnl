@@ -21,6 +21,7 @@ int		main(int argc, char **argv)
 	int		fd;
 	char	*line;
 
+	line = NULL;
 	if (argc > 1)
 	{
 		if (argc > 2 || (fd = open(argv[1], O_RDONLY)) != -1)
@@ -38,7 +39,11 @@ int		main(int argc, char **argv)
 					line = NULL;
 				}
 				if (line)
+				{
 					printf("%s", line);
+					free(line);
+					line = NULL;
+				}
 				close(fd);
 			}
 		}
