@@ -14,6 +14,7 @@
 #include <fcntl.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <string.h>
 #include "libft.h"
 
 int		main(int argc, char **argv)
@@ -35,12 +36,14 @@ int		main(int argc, char **argv)
 				while (get_next_line(fd, &line) == 1)
 				{
 					printf("%s", line);
+					memset(line, '*', strlen(line));
 					free(line);
 					line = NULL;
 				}
 				if (line)
 				{
 					printf("%s", line);
+					memset(line, '*', strlen(line));
 					free(line);
 					line = NULL;
 				}
